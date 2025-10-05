@@ -25,9 +25,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(copy2pico
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        /Source/Sandbox/Qt/utils/taskbarprogress.cpp
-        /Source/Sandbox/Qt/utils/taskbarprogress.hpp
-        dialognoready.h dialognoready.cpp dialognoready.ui
+        ../../utils/taskbarprogress.cpp
+        ../../utils/taskbarprogress.hpp
+        dialognoready.h
+        dialognoready.cpp
+        dialognoready.ui
         copy2pico.rc
     )
 # Define target properties for Android with Qt 6 as:
@@ -49,7 +51,7 @@ else()
 endif()
 
 target_include_directories(copy2pico PRIVATE
-    ../../../../../Source/Sandbox/Qt/utils
+    ../../utils
 )
 target_link_libraries(copy2pico PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
