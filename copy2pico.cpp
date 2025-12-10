@@ -14,6 +14,7 @@
 copy2pico::copy2pico(QWidget *parent)
     : QMainWindow(parent), ui(new Ui_copy2pico), wsize0(0, 0)
 {
+    // qApp->setStyle("Fusion");
     ui->setupUi(this);
     tbp.reset(new TaskBarProgress(this));
     tbp->startProgressMode();
@@ -143,7 +144,7 @@ void copy2pico::Timer1Timer() {
         }
     } else {
         tbp->setError();
-        // ui->progressBar->setStyleSheet(QPBStyleError);
+        ui->progressBar->setStyleSheet(QPBStyleError);
         ui->progressBar->setValue(0);
         ui->progressBar->setRange(0, 100);
         QCoreApplication::processEvents();

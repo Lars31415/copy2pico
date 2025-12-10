@@ -25,8 +25,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(copy2pico
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        /Source/Sandbox/Qt/utils/taskbarprogress.cpp
-        /Source/Sandbox/Qt/utils/taskbarprogress.hpp
+        ../../utils/taskbarprogress.cpp
         dialognoready.h dialognoready.cpp dialognoready.ui
         copy2pico.rc
     )

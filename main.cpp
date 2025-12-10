@@ -13,7 +13,6 @@ int main(int argc, char *argv[]) {
     if (!lockFile.tryLock(100)) {
         return 1;
     }
-
     QApplication a(argc, argv);
     copy2pico w;
     w.show();
